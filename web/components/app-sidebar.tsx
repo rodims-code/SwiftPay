@@ -19,8 +19,8 @@ import { LayoutDashboardIcon, ListIcon, ChartBarIcon, FolderIcon, UsersIcon, Cam
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "rodims-code",
+    email: "ridrodims@gmail.comm",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
@@ -188,7 +188,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <a href="#">
                 <CommandIcon className="size-5!" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <span className="text-base font-semibold">SWIFTPAY</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
