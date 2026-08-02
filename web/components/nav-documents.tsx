@@ -18,8 +18,6 @@ import {
 } from "@/components/ui/sidebar"
 import { MoreHorizontalIcon, FolderIcon, ShareIcon, Trash2Icon } from "lucide-react"
 
-import { ModeToggle } from "@/components/mode-toggle"
-
 export function NavDocuments({
   items,
 }: {
@@ -33,7 +31,7 @@ export function NavDocuments({
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-      <SidebarGroupLabel>Documents</SidebarGroupLabel>
+      <SidebarGroupLabel>Raccourcis</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
           <SidebarMenuItem key={item.name}>
@@ -62,18 +60,18 @@ export function NavDocuments({
                 <DropdownMenuItem>
                   <FolderIcon
                   />
-                  <span>Open</span>
+                  <span>Ouvrir</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <ShareIcon
                   />
-                  <span>Share</span>
+                  <span>Partager</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem variant="destructive">
                   <Trash2Icon
                   />
-                  <span>Delete</span>
+                  <span>Retirer</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -82,7 +80,7 @@ export function NavDocuments({
         <SidebarMenuItem>
           <SidebarMenuButton className="text-sidebar-foreground/70">
             <MoreHorizontalIcon className="text-sidebar-foreground/70" />
-            <span>More</span>
+            <span>Plus</span>
           </SidebarMenuButton>
         </SidebarMenuItem>
       </SidebarMenu>

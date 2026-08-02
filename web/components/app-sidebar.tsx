@@ -15,50 +15,63 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { LayoutDashboardIcon, ListIcon, ChartBarIcon, FolderIcon, UsersIcon, CameraIcon, FileTextIcon, Settings2Icon, CircleHelpIcon, SearchIcon, DatabaseIcon, FileChartColumnIcon, FileIcon, CommandIcon } from "lucide-react"
+import {
+  ArrowDownToLineIcon,
+  CircleHelpIcon,
+  CommandIcon,
+  CreditCardIcon,
+  Globe2Icon,
+  LayoutDashboardIcon,
+  ReceiptTextIcon,
+  SearchIcon,
+  SendIcon,
+  Settings2Icon,
+  UsersIcon,
+  WalletCardsIcon,
+} from "lucide-react"
 
 const data = {
   user: {
-    name: "rodims-code",
-    email: "ridrodims@gmail.comm",
+    name: "Dieuveil K.",
+    email: "+243 97 654 32 10",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
     {
-      title: "Dashboard",
-      url: "#",
+      title: "Aperçu",
+      url: "/dashboard",
       icon: (
         <LayoutDashboardIcon
         />
       ),
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Envoyer",
+      url: "/dashboard/envoyer",
       icon: (
-        <ListIcon
+        <SendIcon
         />
       ),
     },
     {
-      title: "Analytics",
-      url: "#",
+      title: "Recevoir",
+      url: "/dashboard/recevoir",
       icon: (
-        <ChartBarIcon
+        <ArrowDownToLineIcon
         />
       ),
     },
     {
-      title: "Projects",
-      url: "#",
+      title: "Historique",
+      url: "/dashboard/historique",
       icon: (
-        <FolderIcon
+        <ReceiptTextIcon
         />
       ),
     },
     {
-      title: "Team",
-      url: "#",
+      title: "Contacts",
+      url: "/dashboard/contacts",
       icon: (
         <UsersIcon
         />
@@ -67,72 +80,72 @@ const data = {
   ],
   navClouds: [
     {
-      title: "Capture",
+      title: "Portefeuilles",
       icon: (
-        <CameraIcon
+        <WalletCardsIcon
         />
       ),
       isActive: true,
-      url: "#",
+      url: "/dashboard/parametres",
       items: [
         {
-          title: "Active Proposals",
-          url: "#",
+          title: "MTN MoMo",
+          url: "/dashboard/parametres",
         },
         {
-          title: "Archived",
-          url: "#",
+          title: "Airtel Money",
+          url: "/dashboard/parametres",
         },
       ],
     },
     {
-      title: "Proposal",
+      title: "Pays couverts",
       icon: (
-        <FileTextIcon
+        <Globe2Icon
         />
       ),
-      url: "#",
+      url: "/dashboard/envoyer",
       items: [
         {
-          title: "Active Proposals",
-          url: "#",
+          title: "RDC",
+          url: "/dashboard/envoyer",
         },
         {
-          title: "Archived",
-          url: "#",
+          title: "Sénégal",
+          url: "/dashboard/envoyer",
         },
       ],
     },
     {
-      title: "Prompts",
+      title: "Justificatifs",
       icon: (
-        <FileTextIcon
+        <ReceiptTextIcon
         />
       ),
-      url: "#",
+      url: "/dashboard/historique",
       items: [
         {
-          title: "Active Proposals",
-          url: "#",
+          title: "Reçus récents",
+          url: "/dashboard/historique",
         },
         {
-          title: "Archived",
-          url: "#",
+          title: "Exports",
+          url: "/dashboard/historique",
         },
       ],
     },
   ],
   navSecondary: [
     {
-      title: "Settings",
-      url: "#",
+      title: "Paramètres",
+      url: "/dashboard/parametres",
       icon: (
         <Settings2Icon
         />
       ),
     },
     {
-      title: "Get Help",
+      title: "Aide",
       url: "#",
       icon: (
         <CircleHelpIcon
@@ -140,7 +153,7 @@ const data = {
       ),
     },
     {
-      title: "Search",
+      title: "Recherche",
       url: "#",
       icon: (
         <SearchIcon
@@ -150,26 +163,26 @@ const data = {
   ],
   documents: [
     {
-      name: "Data Library",
-      url: "#",
+      name: "Méthodes",
+      url: "/dashboard/parametres",
       icon: (
-        <DatabaseIcon
+        <CreditCardIcon
         />
       ),
     },
     {
-      name: "Reports",
-      url: "#",
+      name: "Historique",
+      url: "/dashboard/historique",
       icon: (
-        <FileChartColumnIcon
+        <ReceiptTextIcon
         />
       ),
     },
     {
-      name: "Word Assistant",
-      url: "#",
+      name: "Pays rapides",
+      url: "/dashboard/envoyer",
       icon: (
-        <FileIcon
+        <Globe2Icon
         />
       ),
     },
@@ -187,8 +200,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               className="data-[slot=sidebar-menu-button]:p-1.5!"
             >
               <a href="#">
-                <CommandIcon className="size-5!" />
-                <span className="text-base font-semibold">SWIFTPAY</span>
+                <CommandIcon className="size-5! text-primary" />
+                <span className="text-base font-semibold">SwiftPay</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
