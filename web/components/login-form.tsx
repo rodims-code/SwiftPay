@@ -1,14 +1,15 @@
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
-} from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import { PhoneInput } from "./phone-input";
 
 export function LoginForm({
   className,
@@ -27,11 +28,11 @@ export function LoginForm({
                 </p>
               </div>
               <Field>
-                <FieldLabel htmlFor="email">Email</FieldLabel>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="m@example.com"
+                <FieldLabel htmlFor="phone">Phone</FieldLabel>
+                <PhoneInput
+                  id="phone"
+                  type="phone"
+                  placeholder="Enter your phone number"
                   required
                 />
               </Field>
@@ -101,5 +102,5 @@ export function LoginForm({
         and <a href="#">Privacy Policy</a>.
       </FieldDescription>
     </div>
-  )
+  );
 }
